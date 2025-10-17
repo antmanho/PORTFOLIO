@@ -32,8 +32,15 @@ export function Navigation({ currentPage, onNavigate, language, onLanguageChange
     >
       <div className="container mx-auto px-6 py-4 flex items-center justify-between">
         {/* Logo */}
+        <style jsx>{`
+          @media (max-width: 768px) {
+            .logo {
+              display: none;
+            }
+          }
+        `}</style>
         <motion.div
-          className="cursor-pointer"
+          className="cursor-pointer logo" // Add a class for responsive hiding
           whileHover={{ scale: 1.05 }}
           onClick={() => onNavigate('home')}
         >
@@ -50,7 +57,7 @@ export function Navigation({ currentPage, onNavigate, language, onLanguageChange
             className={`relative transition-colors ${
               currentPage === 'home' ? 'text-primary' : 'text-muted-foreground hover:text-foreground'
             }`}
-            whileHover={{ scale: 1.05 }}
+            whileHover={{ scale: 1.05 } as any} // Temporary fix for type issue
           >
             {t.about}
             {currentPage === 'home' && (
@@ -66,7 +73,7 @@ export function Navigation({ currentPage, onNavigate, language, onLanguageChange
             className={`relative transition-colors ${
               currentPage === 'projects' ? 'text-primary' : 'text-muted-foreground hover:text-foreground'
             }`}
-            whileHover={{ scale: 1.05 }}
+            whileHover={{ scale: 1.05 } as any} // Temporary fix for type issue
           >
             {t.projects}
             {currentPage === 'projects' && (
@@ -109,7 +116,7 @@ export function Navigation({ currentPage, onNavigate, language, onLanguageChange
 
           {/* LinkedIn Icon */}
           <motion.a
-            href="https://linkedin.com/in/yourprofile"
+            href="https://www.linkedin.com/in/brb-anthony"
             target="_blank"
             rel="noopener noreferrer"
             className="text-muted-foreground hover:text-primary transition-colors"

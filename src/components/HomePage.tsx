@@ -13,8 +13,7 @@ export function HomePage({ language, onNavigateToProjects }: HomePageProps) {
       greeting: "Hi, I'm Anthony Barbedet",
       role: "Final-year Computer Engineering Student at Polytech Montpellier",
       seeking: "Passionate about IT and cybersecurity since childhood, currently seeking a long-term internship (March to August 2026) in IT",
-      description: "Driven by curiosity and innovation, I specialize in cybersecurity with a solid foundation in software development. My goal is to contribute to securing digital infrastructures while continuing to learn and grow in this ever-evolving field.",
-      downloadCV: "Download CV",
+       downloadCV: "Download CV",
       latestProject: "Latest Project",
       projectTitle: "Network Security Scanner",
       projectDesc: "Advanced vulnerability assessment tool with automated reporting and threat analysis",
@@ -35,8 +34,7 @@ export function HomePage({ language, onNavigateToProjects }: HomePageProps) {
       greeting: "Bonjour, je suis Anthony Barbedet",
       role: "Étudiant en dernière année d'École d'Ingénieur en Informatique à Polytech Montpellier",
       seeking: "Passionné par l'IT et la cybersécurité depuis petit, je recherche actuellement un stage long idéalement de mars à août 2026 dans l'IT",
-      description: "Animé par la curiosité et l'innovation, je me spécialise en cybersécurité avec une solide base en développement logiciel. Mon objectif est de contribuer à la sécurisation des infrastructures numériques tout en continuant d'apprendre et d'évoluer dans ce domaine en constante évolution.",
-      downloadCV: "Télécharger CV",
+     downloadCV: "Télécharger CV",
       latestProject: "Dernier Projet",
       projectTitle: "Scanner de Sécurité Réseau",
       projectDesc: "Outil avancé d'évaluation des vulnérabilités avec reporting automatisé et analyse des menaces",
@@ -93,7 +91,8 @@ export function HomePage({ language, onNavigateToProjects }: HomePageProps) {
   };
 
   return (
-    <div className="container mx-auto px-6 py-24 space-y-24 relative z-10">
+    <div className="pt-16">
+      <div className="container mx-auto px-6 py-24 space-y-24 relative z-10">
       {/* Introduction Section */}
       <motion.section
         initial={{ opacity: 0, y: 50 }}
@@ -116,9 +115,7 @@ export function HomePage({ language, onNavigateToProjects }: HomePageProps) {
             <p className="text-muted-foreground mt-4">
               {t.seeking}
             </p>
-            <p className="text-muted-foreground mt-4 text-lg leading-relaxed">
-              {t.description}
-            </p>
+        
           </motion.div>
 
           <motion.button
@@ -140,7 +137,7 @@ export function HomePage({ language, onNavigateToProjects }: HomePageProps) {
           <div className="relative w-full aspect-square max-w-md mx-auto">
             <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full blur-3xl opacity-30 animate-pulse" />
             <ImageWithFallback
-              src="https://images.unsplash.com/photo-1737575655055-e3967cbefd03?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwcm9mZXNzaW9uYWwlMjBkZXZlbG9wZXIlMjBwb3J0cmFpdHxlbnwxfHx8fDE3NjA0MTIwMTB8MA&ixlib=rb-4.1.0&q=80&w=1080"
+              src="/src/assets/images/IMG_3226.jpg" // Corrected path to the local image
               alt="Profile"
               className="relative z-10 w-full h-full object-cover rounded-full border-4 border-primary/50"
             />
@@ -283,6 +280,7 @@ export function HomePage({ language, onNavigateToProjects }: HomePageProps) {
           ))}
         </div>
       </motion.section>
+    </div>
     </div>
   );
 }

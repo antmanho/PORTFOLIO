@@ -7,7 +7,7 @@ import { motion, AnimatePresence } from 'motion/react';
 
 export default function App() {
   const [currentPage, setCurrentPage] = useState<'home' | 'projects'>('home');
-  const [language, setLanguage] = useState<'en' | 'fr'>('en');
+  const [language, setLanguage] = useState<'en' | 'fr'>('fr');
 
   return (
     <div className="min-h-screen bg-background text-foreground overflow-x-hidden">
