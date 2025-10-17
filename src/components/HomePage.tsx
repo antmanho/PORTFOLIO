@@ -137,7 +137,7 @@ export function HomePage({ language, onNavigateToProjects }: HomePageProps) {
           <div className="relative w-full aspect-square max-w-md mx-auto">
             <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full blur-3xl opacity-30 animate-pulse" />
             <ImageWithFallback
-              src="/src/assets/images/IMG_3226.jpg" // Corrected path to the local image
+              src="/assets/images/IMG_3226.jpg" // Adjusted path for public deployment
               alt="Profile"
               className="relative z-10 w-full h-full object-cover rounded-full border-4 border-primary/50"
             />
@@ -163,7 +163,7 @@ export function HomePage({ language, onNavigateToProjects }: HomePageProps) {
         >
           <div className="aspect-video relative">
             <ImageWithFallback
-              src="https://images.unsplash.com/photo-1758598497143-84a0cfdc9958?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjB3ZWIlMjBhcHBsaWNhdGlvbnxlbnwxfHx8fDE3NjAzNzY0Mzd8MA&ixlib=rb-4.1.0&q=80&w=1080"
+              src="https://images.unsplash.com/photo-1758598497143-84a0cfdc9958?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjB3ZWIlMjBhcHBsaUNCYXZpZGF0aW9ufGVufHx8fDE3NjAzNzY0Mzd8MA&ixlib=rb-4.1.0&q=80&w=1080"
               alt="Project"
               className="w-full h-full object-cover"
             />
