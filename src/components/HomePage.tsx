@@ -137,7 +137,7 @@ export function HomePage({ language, onNavigateToProjects }: HomePageProps) {
           <div className="relative w-full aspect-square max-w-md mx-auto">
             <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full blur-3xl opacity-30 animate-pulse" />
             <ImageWithFallback
-              src="/assets/images/IMG_3226.jpg" // Adjusted path for public deployment
+              src="/assets/images/IMG_3226.jpg" // Updated to use the public directory
               alt="Profile"
               className="relative z-10 w-full h-full object-cover rounded-full border-4 border-primary/50"
             />
