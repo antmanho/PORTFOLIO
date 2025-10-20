@@ -39,7 +39,7 @@ export function HomePage({ language, onNavigateToProjects }: HomePageProps) {
     fr: {
       greeting: "Bonjour, je suis Anthony Barbedet",
       role: "Étudiant en dernière année d'École d'Ingénieur en Informatique à Polytech Montpellier",
-      seeking: "Passionné par l'IT et la cybersécurité depuis petit, je recherche actuellement un stage long idéalement de mars à août 2026 dans l'IT",
+      seeking: "Passionné par l'IT depuis petit, je recherche actuellement un stage long idéalement de mars à août 2026 dans l'IT",
      downloadCV: "Télécharger CV",
       latestProject: "Dernier Projet",
       projectTitle: "Scanner de Sécurité Réseau",

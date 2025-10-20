@@ -17,14 +17,14 @@ export function ProjectsPage({ language, onNavigateToHome }: ProjectsPageProps) 
       back: 'Back to Home',
       all: 'All',
       viewGithub: 'View on GitHub',
-      footer: '© 2025 Anthony Barbedet – Built with passion for cybersecurity 💙',
+      footer: '© 2025 Anthony Barbedet – Built with passion for IT 💙',
     },
     fr: {
       title: 'Mes Réalisations',
       back: 'Retour à l\'Accueil',
       all: 'Tous',
       viewGithub: 'Voir sur GitHub',
-      footer: '© 2025 Anthony Barbedet – Créé avec passion pour la cybersécurité 💙',
+      footer: "© 2025 Anthony Barbedet – Créé avec passion pour l'IT 💙",
     },
   };
 
