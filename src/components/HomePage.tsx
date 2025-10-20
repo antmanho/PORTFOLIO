@@ -2,6 +2,12 @@ import { motion } from 'motion/react';
 import { Download, Code, Zap, Cloud, Boxes, Github, ExternalLink } from 'lucide-react';
 import { ImageWithFallback } from './figma/ImageWithFallback';
 
+interface TechItem {
+  name: string;
+  icon: string;
+  isImage?: boolean;
+}
+
 interface HomePageProps {
   language: 'en' | 'fr';
   onNavigateToProjects: () => void;
@@ -55,38 +61,38 @@ export function HomePage({ language, onNavigateToProjects }: HomePageProps) {
 
   const t = translations[language];
 
-  const technologies = {
+  const technologies: { [key: string]: TechItem[] } = {
     languages: [
       { name: 'Python', icon: '🐍' },
       { name: 'Java', icon: '☕' },
-      { name: 'C/C++', icon: '⚡' },
+      { name: 'C', icon: '⚡' },
       { name: 'JavaScript', icon: '💛' },
-      { name: 'Bash', icon: '�' },
+      { name: 'TypeScript', icon: '💙' },
+      { name: 'HTML', icon: '🌐' },
+      { name: 'CSS', icon: '🎨' },
+      { name: 'PHP', icon: '🐘' },
+      { name: 'Bash', icon: '🖥️' },
       { name: 'SQL', icon: '🗄️' },
     ],
     security: [
       { name: 'Nmap', icon: '🔍' },
       { name: 'Wireshark', icon: '🦈' },
-      { name: 'Metasploit', icon: '💥' },
-      { name: 'Burp Suite', icon: '🔒' },
-      { name: 'OWASP ZAP', icon: '⚡' },
-      { name: 'Nessus', icon: '�️' },
     ],
     systems: [
-      { name: 'Linux', icon: '�' },
+      { name: 'Linux', icon: '🐧' },
       { name: 'Windows', icon: '🪟' },
-      { name: 'Docker', icon: '�' },
-      { name: 'VMware', icon: '💻' },
+      { name: 'Docker', icon: '🐳' },
+      { name: 'VirtualBox', icon: '💻' },
       { name: 'Kali Linux', icon: '🐉' },
-      { name: 'pfSense', icon: '�' },
+      { name: 'macOS', icon: '🍎' },
     ],
     tools: [
       { name: 'Git', icon: '🌳' },
-      { name: 'VS Code', icon: '📝' },
+      { name: 'VSCode/VSCodium', icon: '📝' },
       { name: 'IntelliJ', icon: '💡' },
-      { name: 'Ansible', icon: '🤖' },
-      { name: 'Terraform', icon: '�️' },
-      { name: 'Splunk', icon: '📊' },
+      { name: 'DBeaver', icon: '🗄️' },
+      { name: 'phpMyAdmin', icon: '🐘' },
+      { name: 'pgAdmin', icon: '/assets/images/logo_pgadmin.png', isImage: true },
     ],
   };
 
@@ -271,7 +277,17 @@ export function HomePage({ language, onNavigateToProjects }: HomePageProps) {
                     }}
                     className="bg-card border border-border rounded-lg p-4 text-center space-y-2 cursor-pointer"
                   >
-                    <div className="text-4xl">{tech.icon}</div>
+                    <div className="text-4xl flex justify-center items-center h-16">
+                      {tech.isImage ? (
+                        <img 
+                          src={tech.icon} 
+                          alt={tech.name} 
+                          className="w-8 h-8 object-contain"
+                        />
+                      ) : (
+                        tech.icon
+                      )}
+                    </div>
                     <p className="text-sm text-muted-foreground">{tech.name}</p>
                   </motion.div>
                 ))}

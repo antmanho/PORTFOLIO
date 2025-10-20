@@ -2,8 +2,8 @@ import { Linkedin } from 'lucide-react';
 import { motion } from 'motion/react';
 
 interface NavigationProps {
-  currentPage: 'home' | 'projects';
-  onNavigate: (page: 'home' | 'projects') => void;
+  currentPage: 'home' | 'projects' | 'contact';
+  onNavigate: (page: 'home' | 'projects' | 'contact') => void;
   language: 'en' | 'fr';
   onLanguageChange: (lang: 'en' | 'fr') => void;
 }
@@ -84,13 +84,21 @@ export function Navigation({ currentPage, onNavigate, language, onLanguageChange
             )}
           </motion.button>
 
-          <motion.a
-            href="#contact"
-            className="text-muted-foreground hover:text-foreground transition-colors"
-            whileHover={{ scale: 1.05 }}
+          <motion.button
+            onClick={() => onNavigate('contact')}
+            className={`relative transition-colors ${
+              currentPage === 'contact' ? 'text-primary' : 'text-muted-foreground hover:text-foreground'
+            }`}
+            whileHover={{ scale: 1.05 } as any} // Temporary fix for type issue
           >
             {t.contact}
-          </motion.a>
+            {currentPage === 'contact' && (
+              <motion.div
+                layoutId="activeTab"
+                className="absolute -bottom-1 left-0 right-0 h-0.5 bg-gradient-to-r from-blue-500 to-cyan-500"
+              />
+            )}
+          </motion.button>
 
           {/* Language Toggle */}
           <div className="flex items-center gap-2 ml-4">

@@ -3,10 +3,11 @@ import { AnimatedBackground } from './components/AnimatedBackground';
 import { Navigation } from './components/Navigation';
 import { HomePage } from './components/HomePage';
 import { ProjectsPage } from './components/ProjectsPage';
+import ContactPage from './components/ContactPage';
 import { motion, AnimatePresence } from 'motion/react';
 
 export default function App() {
-  const [currentPage, setCurrentPage] = useState<'home' | 'projects'>('home');
+  const [currentPage, setCurrentPage] = useState<'home' | 'projects' | 'contact'>('home');
   const [language, setLanguage] = useState<'en' | 'fr'>('fr');
 
   return (
@@ -37,7 +38,7 @@ export default function App() {
               onNavigateToProjects={() => setCurrentPage('projects')}
             />
           </motion.div>
-        ) : (
+        ) : currentPage === 'projects' ? (
           <motion.div
             key="projects"
             initial={{ opacity: 0, x: 100 }}
@@ -46,6 +47,19 @@ export default function App() {
             transition={{ duration: 0.5 }}
           >
             <ProjectsPage
+              language={language}
+              onNavigateToHome={() => setCurrentPage('home')}
+            />
+          </motion.div>
+        ) : (
+          <motion.div
+            key="contact"
+            initial={{ opacity: 0, y: 100 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -100 }}
+            transition={{ duration: 0.5 }}
+          >
+            <ContactPage
               language={language}
               onNavigateToHome={() => setCurrentPage('home')}
             />

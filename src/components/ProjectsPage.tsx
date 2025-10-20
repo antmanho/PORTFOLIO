@@ -32,64 +32,124 @@ export function ProjectsPage({ language, onNavigateToHome }: ProjectsPageProps) 
 
   const projects = [
     {
-      id: 1,
-      title: 'Network Security Scanner',
-      titleFr: 'Scanner de Sécurité Réseau',
-      description: 'Advanced vulnerability assessment tool with automated reporting and threat analysis',
-      descriptionFr: 'Outil avancé d\'évaluation des vulnérabilités avec reporting automatisé et analyse des menaces',
-      image: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHw1fHxjeWJlcnNlY3VyaXR5fGVufDF8fHx8MTc2MDQxMjgxN3ww&ixlib=rb-4.1.0&q=80&w=1080',
-      tags: ['Python', 'Nmap', 'Nessus', 'Flask'],
-      github: 'https://github.com/anthony-barbedet',
+      id: 12,
+      title: 'CityMatch',
+      titleFr: 'CityMatch',
+      description: 'Secure application for creating or joining any type of event (online or in-person) implementing OWASP security best practices',
+      descriptionFr: 'Application sécurisée pour créer ou rejoindre tout type d\'événement (en ligne ou présentiel) implémentant les meilleures pratiques de sécurité OWASP',
+      image: '/assets/images/CityMatch.png',
+      tags: ['React Native', 'Expo Go', 'Node.js', 'Docker', 'Keycloak', 'OWASP'],
+      github: 'https://github.com/Eugenio-BAYE/citymatch',
     },
     {
-      id: 2,
-      title: 'Penetration Testing Lab',
-      titleFr: 'Laboratoire de Tests d\'Intrusion',
-      description: 'Virtualized environment for ethical hacking and security testing',
-      descriptionFr: 'Environnement virtualisé pour le hacking éthique et les tests de sécurité',
-      image: 'https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHw0fHxoYWNraW5nfGVufDF8fHx8MTc2MDQxMjg2N3ww&ixlib=rb-4.1.0&q=80&w=1080',
-      tags: ['Kali Linux', 'Metasploit', 'Docker', 'VMware'],
-      github: 'https://github.com/anthony-barbedet',
+      id: 10,
+      title: 'Poisoning ARP',
+      titleFr: 'Poisoning ARP',
+      description: 'ARP attack testing on local machines for cybersecurity research',
+      descriptionFr: 'Test d\'une attaque ARP sur mes machines en local',
+      image: '/assets/images/poisoningARP.png',
+      tags: ['Nmap', 'Wireshark', 'VMBox', 'Kali Linux'],
+      github: null,
     },
     {
-      id: 3,
-      title: 'SIEM Dashboard',
-      titleFr: 'Tableau de Bord SIEM',
-      description: 'Real-time security monitoring and incident response platform',
-      descriptionFr: 'Plateforme de surveillance de sécurité et de réponse aux incidents en temps réel',
-      image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHw2fHxzZWN1cml0eSUyMG1vbml0b3Jpbmd8ZW58MXx8fHwxNzYwNDEyOTEyfDA&ixlib=rb-4.1.0&q=80&w=1080',
-      tags: ['Splunk', 'Python', 'React', 'Elasticsearch'],
-      github: 'https://github.com/anthony-barbedet',
+      id: 11,
+      title: 'Shopyverse',
+      titleFr: 'Shopyverse',
+      description: 'Application for creating e-commerce websites, inspired by Shopify',
+      descriptionFr: 'Application pour créer des sites e-commerce, inspirée de Shopify',
+      image: '/assets/images/ShopyVerse.png',
+      tags: ['React', 'TypeScript', 'CSS', 'HTML'],
+      github: 'https://github.com/antmanho/Shopyverse',
     },
     {
-      id: 4,
-      title: 'Digital Forensics Toolkit',
-      titleFr: 'Boîte à Outils d\'Investigation Numérique',
-      description: 'Comprehensive forensic analysis suite for digital evidence examination',
-      descriptionFr: 'Suite d\'analyse forensique complète pour l\'examen de preuves numériques',
-      image: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHw3fHxmb3JlbnNpY3N8ZW58MXx8fHwxNzYwNDEyOTU2fDA&ixlib=rb-4.1.0&q=80&w=1080',
-      tags: ['Python', 'Volatility', 'Autopsy', 'C++'],
-      github: 'https://github.com/anthony-barbedet',
+      id: 9,
+      title: 'Internship at TRF Retail Barcelona',
+      titleFr: 'Stage à Barcelone chez TRF Retail',
+      description: 'Internship in Barcelona at TRF Retail: Creation of an internal company platform and a client screen to automatically supervise data processing',
+      descriptionFr: 'Stage à Barcelone chez TRF Retail : Création d\'une plateforme interne à l\'entreprise et d\'un écran client pour superviser automatiquement les traitements de données',
+      image: '/assets/images/BARCELONE.png',
+      tags: ['PHP', 'Vue 3'],
+      github: null,
     },
     {
-      id: 5,
-      title: 'Secure Web Application',
-      titleFr: 'Application Web Sécurisée',
-      description: 'Full-stack application implementing OWASP security best practices',
-      descriptionFr: 'Application full-stack implémentant les meilleures pratiques de sécurité OWASP',
-      image: 'https://images.unsplash.com/photo-1555949963-aa79dcee981c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHw4fHx3ZWIlMjBzZWN1cml0eXxlbnwxfHx8fDE3NjA0MTMwMDN8MA&ixlib=rb-4.1.0&q=80&w=1080',
-      tags: ['React', 'Node.js', 'JWT', 'OWASP'],
-      github: 'https://github.com/anthony-barbedet',
+      id: 8,
+      title: 'Native Swift App',
+      titleFr: 'Application Swift Native',
+      description: 'Native iOS redesign of BoardLand to manage sales, deposits and finances of a festival',
+      descriptionFr: 'Refonte iOS native de BoardLand pour gérer ventes, dépôts et finances d\'un festival',
+      image: '/assets/images/Boardland_mobile.png',
+      tags: ['Swift'],
+      github: 'https://github.com/antmanho/PROJECT_MOBILE',
+    },
+    {
+      id: 7,
+      title: 'N-Body Simulation',
+      titleFr: 'Simulation N-Corps',
+      description: 'Real-time simulation of N-body gravitational attraction',
+      descriptionFr: 'Simulation temps réel d\'attraction gravitationnelle à N corps',
+      image: '/assets/images/Nbody.png',
+      tags: ['Java', 'JavaScript', 'Maven'],
+      github: 'https://github.com/antmanho/SIMULATION_NCORPS',
     },
     {
       id: 6,
-      title: 'Network Packet Analyzer',
-      titleFr: 'Analyseur de Paquets Réseau',
-      description: 'Custom network traffic analysis tool with anomaly detection',
-      descriptionFr: 'Outil d\'analyse du trafic réseau personnalisé avec détection d\'anomalies',
-      image: 'https://images.unsplash.com/photo-1518709268805-4e9042af2176?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHw5fHxuZXR3b3JrJTIwYW5hbHlzaXN8ZW58MXx8fHwxNzYwNDEzMDQ3fDA&ixlib=rb-4.1.0&q=80&w=1080',
-      tags: ['Wireshark', 'Python', 'C++', 'Machine Learning'],
-      github: 'https://github.com/anthony-barbedet',
+      title: 'BoardLand Platform',
+      titleFr: 'Plateforme BoardLand',
+      description: 'Board game festival management platform with roles and secure workflows implementing OWASP security best practices',
+      descriptionFr: 'Plateforme de gestion de festivals de jeux de société avec rôles et workflows sécurisés implémentant les meilleures pratiques de sécurité OWASP',
+      image: '/assets/images/Boardland_web.png',
+      tags: ['Angular', 'Node.js', 'OWASP'],
+      github: 'https://github.com/antmanho/PROJECT_AWI',
+    },
+    {
+      id: 5,
+      title: 'Data Science Project',
+      titleFr: 'Projet Data Science',
+      description: 'Web tool for forecasting electricity consumption in France until 2050',
+      descriptionFr: 'Outil web de prévision de la consommation d\'électricité en France jusqu\'en 2050',
+      image: '/assets/images/Data.png',
+      tags: ['Python', 'R', 'Node.js'],
+      github: 'https://github.com/antmanho/DATA_SCIENCE',
+    },
+    {
+      id: 4,
+      title: 'Geekomaniak',
+      titleFr: 'Geekomaniak',
+      description: 'High-tech marketplace focused on solid software architecture (DAO, Facade, etc.)',
+      descriptionFr: 'Marketplace high-tech axée sur l\'architecture logicielle solide (DAO, Facade, etc.)',
+      image: '/assets/images/Geekomaniak.png',
+      tags: ['Java', 'JavaFX', 'PostgreSQL'],
+      github: null,
+    },
+    {
+      id: 3,
+      title: 'Tournament Platform',
+      titleFr: 'Plateforme Tournament',
+      description: 'Platform to create/join geolocated tournaments on interactive map',
+      descriptionFr: 'Plateforme pour créer/rejoindre des tournois géolocalisés sur carte interactive',
+      image: '/assets/images/TOURNAMENT.png',
+      tags: ['PHP', 'Node.js'],
+      github: 'https://github.com/antmanho/WEB_PROJECT_NODEJS',
+    },
+    {
+      id: 2,
+      title: 'Gloves for Sign Language',
+      titleFr: 'Gants pour Langage des Signes',
+      description: 'Communicating glove displaying text on LCD, controlled by Raspberry Pi',
+      descriptionFr: 'Gant communicant affichant du texte sur LCD, piloté par Raspberry Pi',
+      image: '/assets/images/glove.png',
+      tags: ['Raspberry Pi', 'Python'],
+      github: 'https://github.com/antmanho/IOT_PROJECT',
+    },
+    {
+      id: 1,
+      title: 'LinuxTerm Chat',
+      titleFr: 'Chat LinuxTerm',
+      description: 'Linux terminal messaging with channels and file sharing, protected accounts',
+      descriptionFr: 'Messagerie terminal Linux avec salons et partage de fichiers, comptes protégés',
+      image: '/assets/images/messagerie.jpeg',
+      tags: ['C'],
+      github: 'https://github.com/YohannSchatt/Messagerie_Linux',
     },
   ];
 
@@ -191,16 +251,23 @@ export function ProjectsPage({ language, onNavigateToHome }: ProjectsPageProps) 
                   ))}
                 </div>
 
-                <motion.a
-                  href={project.github}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  whileHover={{ scale: 1.05, boxShadow: '0 0 15px rgba(59, 130, 246, 0.5)' }}
-                  className="flex items-center gap-2 px-4 py-2 bg-primary text-primary-foreground rounded-lg w-full justify-center"
-                >
-                  <Github className="w-4 h-4" />
-                  {t.viewGithub}
-                </motion.a>
+                {project.github ? (
+                  <motion.a
+                    href={project.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    whileHover={{ scale: 1.05, boxShadow: '0 0 15px rgba(59, 130, 246, 0.5)' }}
+                    className="flex items-center gap-2 px-4 py-2 bg-primary text-primary-foreground rounded-lg w-full justify-center"
+                  >
+                    <Github className="w-4 h-4" />
+                    {t.viewGithub}
+                  </motion.a>
+                ) : (
+                  <div className="flex items-center gap-2 px-4 py-2 bg-muted text-muted-foreground rounded-lg w-full justify-center">
+                    <Github className="w-4 h-4" />
+                    {language === 'fr' ? 'Pas de repo public' : 'No public repo'}
+                  </div>
+                )}
               </div>
             </motion.div>
           ))}
