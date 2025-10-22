@@ -1,6 +1,7 @@
 import { motion } from 'motion/react';
 import { Download, Code, Zap, Cloud, Boxes, Github, ExternalLink } from 'lucide-react';
 import { ImageWithFallback } from './figma/ImageWithFallback';
+import { CVDownload } from './CVDownload';
 
 interface TechItem {
   name: string;
@@ -10,7 +11,7 @@ interface TechItem {
 
 interface HomePageProps {
   language: 'en' | 'fr';
-  onNavigateToProjects: () => void;
+  onNavigateToProjects: () => void;d
 }
 
 export function HomePage({ language, onNavigateToProjects }: HomePageProps) {
@@ -19,7 +20,6 @@ export function HomePage({ language, onNavigateToProjects }: HomePageProps) {
       greeting: "Hi, I'm Anthony Barbedet",
       role: "Final-year Computer Engineering Student at Polytech Montpellier",
       seeking: "Passionate about IT and cybersecurity since childhood, currently seeking a long-term internship (March to August 2026) in IT",
-       downloadCV: "Download CV",
       latestProject: "Latest Project",
       projectTitle: "Network Security Scanner",
       projectDesc: "Advanced vulnerability assessment tool with automated reporting and threat analysis",
@@ -37,10 +37,9 @@ export function HomePage({ language, onNavigateToProjects }: HomePageProps) {
       tools: "Development Tools",
     },
     fr: {
-      greeting: "Bonjour, je suis Anthony Barbedet",
+      greeting: "Bonjour, je m'appel Anthony Barbedet",
       role: "Étudiant en dernière année d'École d'Ingénieur en Informatique à Polytech Montpellier",
       seeking: "Passionné par l'IT depuis petit, je recherche actuellement un stage long idéalement de mars à août 2026 dans l'IT",
-     downloadCV: "Télécharger CV",
       latestProject: "Dernier Projet",
       projectTitle: "Scanner de Sécurité Réseau",
       projectDesc: "Outil avancé d'évaluation des vulnérabilités avec reporting automatisé et analyse des menaces",
@@ -124,14 +123,7 @@ export function HomePage({ language, onNavigateToProjects }: HomePageProps) {
         
           </motion.div>
 
-          <motion.button
-            whileHover={{ scale: 1.05, boxShadow: '0 0 20px rgba(59, 130, 246, 0.5)' }}
-            whileTap={{ scale: 0.95 }}
-            className="flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white rounded-lg transition-all"
-          >
-            <Download className="w-5 h-5" />
-            {t.downloadCV}
-          </motion.button>
+          <CVDownload language={language} />
         </div>
 
         <motion.div
