@@ -21,8 +21,8 @@ export function HomePage({ language, onNavigateToProjects }: HomePageProps) {
       role: "Final-year Computer Engineering Student at Polytech Montpellier",
       seeking: "Passionate about IT and cybersecurity since childhood, currently seeking a long-term internship (March to August 2026) in IT",
       latestProject: "Latest Project",
-      projectTitle: "Network Security Scanner",
-      projectDesc: "Advanced vulnerability assessment tool with automated reporting and threat analysis",
+      projectTitle: "Website Penetration Testing",
+      projectDesc: "Comprehensive security assessment of my own website using hashed password tables and brute force techniques for user password recovery",
       viewProject: "View Project",
       seeAllProjects: "See All Projects",
       specialties: "Areas of Expertise",
@@ -41,8 +41,8 @@ export function HomePage({ language, onNavigateToProjects }: HomePageProps) {
       role: "Étudiant en dernière année d'École d'Ingénieur en Informatique à Polytech Montpellier",
       seeking: "Passionné par l'IT depuis petit, je recherche actuellement un stage long idéalement de mars à août 2026 dans l'IT",
       latestProject: "Dernier Projet",
-      projectTitle: "Scanner de Sécurité Réseau",
-      projectDesc: "Outil avancé d'évaluation des vulnérabilités avec reporting automatisé et analyse des menaces",
+      projectTitle: "Test de Pénétration de Site Web",
+      projectDesc: "Évaluation complète de la sécurité de mon propre site web utilisant des tables de mots de passe hashés et les techniques de brute force pour la récupération de mots de passe utilisateur",
       viewProject: "Voir le Projet",
       seeAllProjects: "Voir Tous les Projets",
       specialties: "Domaines d'Expertise",
@@ -161,8 +161,8 @@ export function HomePage({ language, onNavigateToProjects }: HomePageProps) {
         >
           <div className="aspect-video relative">
             <ImageWithFallback
-              src="https://images.unsplash.com/photo-1758598497143-84a0cfdc9958?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjB3ZWIlMjBhcHBsaUNCYXZpZGF0aW9ufGVufHx8fDE3NjAzNzY0Mzd8MA&ixlib=rb-4.1.0&q=80&w=1080"
-              alt="Project"
+              src="https://images.unsplash.com/photo-1629654297299-c8506221ca97?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxkYXJrJTIwdGVybWluYWwlMjBjb2Rpbmd8ZW58MHx8fHwxNzMwNDU0ODc5fDA&ixlib=rb-4.1.0&q=80&w=1080"
+              alt="Dark Terminal Coding Environment"
               className="w-full h-full object-cover"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-card to-transparent" />
@@ -171,16 +171,6 @@ export function HomePage({ language, onNavigateToProjects }: HomePageProps) {
             <h3 className="text-foreground">{t.projectTitle}</h3>
             <p className="text-muted-foreground">{t.projectDesc}</p>
             <div className="flex gap-4">
-              <motion.a
-                href="https://github.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                whileHover={{ scale: 1.05, boxShadow: '0 0 15px rgba(59, 130, 246, 0.5)' }}
-                className="flex items-center gap-2 px-4 py-2 bg-primary text-primary-foreground rounded-lg"
-              >
-                <Github className="w-4 h-4" />
-                {t.viewProject}
-              </motion.a>
               <motion.button
                 onClick={onNavigateToProjects}
                 whileHover={{ scale: 1.05 }}
