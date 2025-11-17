@@ -54,7 +54,7 @@ export function Navigation({ currentPage, onNavigate, language, onLanguageChange
         <div className="flex items-center gap-8">
           <motion.button
             onClick={() => onNavigate('home')}
-            className={`relative transition-colors ${
+            className={`relative transition-colors whitespace-nowrap ${
               currentPage === 'home' ? 'text-primary' : 'text-muted-foreground hover:text-foreground'
             }`}
             whileHover={{ scale: 1.05 } as any} // Temporary fix for type issue
@@ -70,7 +70,7 @@ export function Navigation({ currentPage, onNavigate, language, onLanguageChange
 
           <motion.button
             onClick={() => onNavigate('projects')}
-            className={`relative transition-colors ${
+            className={`relative transition-colors whitespace-nowrap ${
               currentPage === 'projects' ? 'text-primary' : 'text-muted-foreground hover:text-foreground'
             }`}
             whileHover={{ scale: 1.05 } as any} // Temporary fix for type issue
@@ -86,7 +86,7 @@ export function Navigation({ currentPage, onNavigate, language, onLanguageChange
 
           <motion.button
             onClick={() => onNavigate('contact')}
-            className={`relative transition-colors ${
+            className={`relative transition-colors whitespace-nowrap ${
               currentPage === 'contact' ? 'text-primary' : 'text-muted-foreground hover:text-foreground'
             }`}
             whileHover={{ scale: 1.05 } as any} // Temporary fix for type issue

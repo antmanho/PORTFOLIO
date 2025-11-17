@@ -11,7 +11,7 @@ interface TechItem {
 
 interface HomePageProps {
   language: 'en' | 'fr';
-  onNavigateToProjects: () => void;d
+  onNavigateToProjects: () => void;
 }
 
 export function HomePage({ language, onNavigateToProjects }: HomePageProps) {
@@ -62,35 +62,35 @@ export function HomePage({ language, onNavigateToProjects }: HomePageProps) {
 
   const technologies: { [key: string]: TechItem[] } = {
     languages: [
-      { name: 'Python', icon: '🐍' },
-      { name: 'Java', icon: '☕' },
-      { name: 'C', icon: '⚡' },
-      { name: 'JavaScript', icon: '💛' },
-      { name: 'TypeScript', icon: '💙' },
-      { name: 'HTML', icon: '🌐' },
-      { name: 'CSS', icon: '🎨' },
-      { name: 'PHP', icon: '🐘' },
-      { name: 'Bash', icon: '🖥️' },
-      { name: 'SQL', icon: '🗄️' },
+      { name: 'Python', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg', isImage: true },
+      { name: 'Java', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg', isImage: true },
+      { name: 'C', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg', isImage: true },
+      { name: 'JavaScript', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg', isImage: true },
+      { name: 'TypeScript', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg', isImage: true },
+      { name: 'HTML', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg', isImage: true },
+      { name: 'CSS', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg', isImage: true },
+      { name: 'PHP', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg', isImage: true },
+      { name: 'Bash', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bash/bash-original.svg', isImage: true },
+      { name: 'SQL', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg', isImage: true },
     ],
     security: [
-      { name: 'Nmap', icon: '🔍' },
-      { name: 'Wireshark', icon: '🦈' },
+      { name: 'Nmap', icon: 'https://nmap.org/images/sitelogo.png', isImage: true },
+      { name: 'Wireshark', icon: 'https://www.wireshark.org/assets/icons/wireshark-fin@2x.png', isImage: true },
     ],
     systems: [
-      { name: 'Linux', icon: '🐧' },
-      { name: 'Windows', icon: '🪟' },
-      { name: 'Docker', icon: '🐳' },
-      { name: 'VirtualBox', icon: '💻' },
-      { name: 'Kali Linux', icon: '🐉' },
-      { name: 'macOS', icon: '🍎' },
+      { name: 'Linux', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg', isImage: true },
+      { name: 'Windows', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/windows8/windows8-original.svg', isImage: true },
+      { name: 'Docker', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg', isImage: true },
+      { name: 'VirtualBox', icon: 'https://upload.wikimedia.org/wikipedia/commons/d/d5/Virtualbox_logo.png', isImage: true },
+      { name: 'Kali Linux', icon: 'https://www.kali.org/images/kali-dragon-icon.svg', isImage: true },
+      { name: 'macOS', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/apple/apple-original.svg', isImage: true },
     ],
     tools: [
-      { name: 'Git', icon: '🌳' },
-      { name: 'VSCode/VSCodium', icon: '📝' },
-      { name: 'IntelliJ', icon: '💡' },
-      { name: 'DBeaver', icon: '🗄️' },
-      { name: 'phpMyAdmin', icon: '🐘' },
+      { name: 'Git', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg', isImage: true },
+      { name: 'VSCode', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg', isImage: true },
+      { name: 'IntelliJ', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/intellij/intellij-original.svg', isImage: true },
+      { name: 'DBeaver', icon: 'https://dbeaver.io/wp-content/uploads/2015/09/beaver-head.png', isImage: true },
+      { name: 'phpMyAdmin', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg', isImage: true },
       { name: 'pgAdmin', icon: '/assets/images/logo_pgadmin.png', isImage: true },
     ],
   };
